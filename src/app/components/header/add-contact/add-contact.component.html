@@ -1,0 +1,37 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmitForm()">
+
+  <div class="txtfield">
+    <fa-icon [icon]="faUser" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="firstName" placeholder="First Name">
+    <input formControlName="middleName" placeholder="Middle Name">
+    <input formControlName="lastName" placeholder="Last Name">
+  </div>
+  <div *ngIf="addForm.hasError('nameIsEmpty') && (addForm.touched || clickedSubmit)" class="warning">Name is empty!
+  </div>
+  <div class="txtfield">
+    <fa-icon [icon]="faMobile" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="mobile" placeholder="Mobile">
+  </div>
+  <div *ngIf="addForm.get('mobile')?.hasError('mobileAlreadyExists') && (addForm.touched || clickedSubmit)"
+    class="warning">Mobile already
+    exists!</div>
+  <div *ngIf="addForm.get('mobile')?.hasError('required') && (addForm.touched || clickedSubmit)" class="warning">Mobile is empty!
+  </div>
+  <div class="txtfield">
+    <fa-icon [icon]="faEnvelope" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="email" placeholder="Email">
+  </div>
+  <div class="txtfield">
+    <fa-icon [icon]="faBriefcase" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="work" placeholder="Work Info">
+  </div>
+  <div class="txtfield">
+    <fa-icon [icon]="faClipboard" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="remarks" placeholder="Remarks">
+  </div>
+  <div class="txtfield">
+    <fa-icon [icon]="faCakeCandles" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    <input formControlName="dob" placeholder="Date of Birth">
+  </div>
+  <button type="Submit" class="btn">Add</button>
+</form>

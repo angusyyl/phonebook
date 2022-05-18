@@ -1,0 +1,9 @@
+<div class="searchbox-container">
+  <form [formGroup]="searchForm">
+    <input type="text" class="searchbox" placeholder="Type name or phone number to search" name="searchKeyword"
+      formControlName="searchKeyword" />
+    <div class="clear-btn" (click)="onClearSearch()">
+      <fa-icon [icon]="faDeleteLeft" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+.contact-info {
+  margin: 10px 0px;
+}
+
+.container {
+  width: 50%;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #192a56;
+  border-radius: 5px;
+  color: #fff;
+}

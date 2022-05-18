@@ -1,0 +1,23 @@
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.toolbar {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.contact-cnt {
+  text-align: center;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border-width: 1px;
+  background-color: #192a56;
+  margin: 10px;
+}

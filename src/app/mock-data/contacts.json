@@ -1,0 +1,103 @@
+{
+  "contacts": [
+    {
+      "id": "353956a5-5aa6-4142-bd3a-29449968f8ee",
+      "firstName": "Angus",
+      "middleName": "Deep",
+      "lastName": null,
+      "mobile": "35620155318",
+      "email": "angusdeep@gmail.com",
+      "work": "Farm",
+      "remarks": null,
+      "dob": null
+    },
+    {
+      "id": "870e5fa0-67c4-4752-8c09-a106735482b1",
+      "firstName": "Chris",
+      "middleName": null,
+      "lastName": "Chan",
+      "mobile": "22532164",
+      "email": "chrischan1995@gmail.com",
+      "work": "Golf woman",
+      "remarks": null,
+      "dob": "20-01-1995"
+    },
+    {
+      "id": "da4fbf93-0e9c-426a-892d-c758c7540de7",
+      "firstName": "Angus",
+      "middleName": null,
+      "lastName": "Lam",
+      "mobile": "32665230",
+      "email": "happyanguslam@gmail.com",
+      "work": "GOV",
+      "remarks": null,
+      "dob": null
+    },
+    {
+      "id": "0fe82372-06f3-4f52-a7e9-8542911a25ec",
+      "firstName": "Jimmy",
+      "middleName": null,
+      "lastName": "Page",
+      "mobile": null,
+      "email": "jimmyallsie@gmail.com",
+      "work": null,
+      "remarks": null,
+      "dob": null
+    },
+    {
+      "id": "caed372b-b91d-4162-a4cc-be491f744f76",
+      "firstName": "Caros",
+      "middleName": null,
+      "lastName": null,
+      "mobile": "65223522",
+      "email": "carosleung@gmail.com",
+      "work": null,
+      "remarks": null,
+      "dob": null
+    },
+    {
+      "id": "a271d2b9-1a21-4967-963b-919493d5ba31",
+      "firstName": "Lisa",
+      "middleName": null,
+      "lastName": "Lok",
+      "mobile": "31365100",
+      "email": null,
+      "work": "EEG",
+      "remarks": null,
+      "dob": null
+    },
+    {
+      "id": "d1d9a4c8-9e32-45db-a04a-722859ff55ae",
+      "firstName": "Felix",
+      "middleName": null,
+      "lastName": "Choi",
+      "mobile": "32360622",
+      "email": "felixchoi1213@gmail.com",
+      "work": null,
+      "remarks": "Student",
+      "dob": null
+    },
+    {
+      "id": "08e65a1a-3aec-47b9-9e6e-4f0a55648f4d",
+      "firstName": "Jupyter",
+      "middleName": null,
+      "lastName": "Notebook",
+      "mobile": "165636558930",
+      "email": "iamjupyter@gmail.com",
+      "work": "Python",
+      "remarks": "hello world!",
+      "dob": null
+    },
+    {
+      "id": "1e4dd926-015b-46c8-b89d-33e07a94211b",
+      "firstName": "Blue",
+      "middleName": null,
+      "lastName": "Ocean",
+      "mobile": "02062466588",
+      "email": "iloveblueocean@gmail.com",
+      "work": "Submarine",
+      "remarks": "Save the ocean",
+      "dob": null
+    }
+  ]
+}

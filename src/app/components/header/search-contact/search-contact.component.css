@@ -1,0 +1,22 @@
+.searchbox-container {
+  border: 1px solid #192a56;
+  background-color: #192a56;
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 30%;
+  position: relative;
+}
+
+.searchbox {
+  outline: none;
+  background: none;
+  border: 0;
+  width: 90%;
+  color: #fff;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 20px;
+  transform: translateY(-16px);
+}

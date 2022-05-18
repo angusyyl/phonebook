@@ -1,0 +1,14 @@
+<div class="title">Phone Book</div>
+<div class="contact-cnt">{{numOfContacts}} contacts</div>
+<div class="toolbar">
+  <button (click)="onToggleAddContact()" class="btn">
+    <fa-icon [icon]="faPlus" [styles]="{'stroke': 'white', 'color': 'white'}" transform="shrink-4 left-4"></fa-icon>
+  </button>
+  <button (click)="onToggleSearchContact()" class="btn">
+    <fa-icon [icon]="faMagnifyingGlass" [styles]="{'stroke': 'white', 'color': 'white'}" transform="shrink-4 left-4">
+    </fa-icon>
+  </button>
+</div>
+
+<app-add-contact [hidden]="!showAddContact"></app-add-contact>
+<app-search-contact [hidden]="!showSearchContact"></app-search-contact>

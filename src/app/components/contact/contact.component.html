@@ -1,0 +1,30 @@
+<div class="container">
+  <div (click)="onToggleDetail()" class="name">
+    <fa-icon [icon]="faUser" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+    {{contactVO?.contact?.firstName}} {{contactVO?.contact?.middleName}}
+    {{contactVO?.contact?.lastName}}
+  </div>
+  <div *ngIf="contactVO?.showDetail">
+    <div class="contact-info">
+      <fa-icon [icon]="faMobile" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+      {{contactVO?.contact?.mobile}}
+    </div>
+    <div class="contact-info">
+      <fa-icon [icon]="faBriefcase" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+      {{contactVO?.contact?.work}}
+    </div>
+    <div class="contact-info">
+      <fa-icon [icon]="faClipboard" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+      {{contactVO?.contact?.remarks}}
+    </div>
+    <div class="contact-info">
+      <fa-icon [icon]="faEnvelope" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+      {{contactVO?.contact?.email}}
+    </div>
+    <div class="contact-info">
+      <fa-icon [icon]="faCakeCandles" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
+      {{contactVO?.contact?.dob}}
+    </div>
+    <button (click)="onDelete(contactVO?.contact!.id)" class="btn">Delete</button>
+  </div>
+</div>

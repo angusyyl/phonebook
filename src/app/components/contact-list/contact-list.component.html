@@ -1,0 +1,3 @@
+<div *ngFor="let contactVO of contacts" class="container">
+  <app-contact [contact]="contactVO.contact" *ngIf="!contactVO.hidden"></app-contact>
+</div>

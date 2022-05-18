@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(120deg, #273c75, #7f8fa6);
+}
