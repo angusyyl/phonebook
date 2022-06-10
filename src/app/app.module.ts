@@ -4,6 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -23,6 +26,8 @@ import { SearchContactComponent } from './components/header/search-contact/searc
     SearchContactComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,

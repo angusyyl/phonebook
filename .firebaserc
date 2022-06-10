@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "phonebook-a7ad4"
+  },
+  "targets": {
+    "phonebook-a7ad4": {
+      "hosting": {
+        "phonebook": [
+          "phonebook-a7ad4"
+        ]
+      }
+    }
+  }
+}

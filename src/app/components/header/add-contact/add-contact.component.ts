@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { faUser, faMobile, faEnvelope, faBriefcase, faClipboard, faCakeCandles } from '@fortawesome/free-solid-svg-icons';
 import { AsyncValidatorsService } from 'src/app/services/async-validators.service';
 import { ValidatorsService } from 'src/app/services/validators.service';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 
 @Component({
@@ -27,14 +28,14 @@ export class AddContactComponent implements OnInit {
     firstName: new FormControl(null),
     middleName: new FormControl(null),
     lastName: new FormControl(null),
-    mobile: new FormControl(null, Validators.required, AsyncValidatorsService.mobileAsyncValidator(this.contactService)),
+    mobile: new FormControl(null, Validators.required, AsyncValidatorsService.mobileAsyncValidator(this.afdb)),
     email: new FormControl(null, Validators.email),
     work: new FormControl(null),
     remarks: new FormControl(null),
     dob: new FormControl(null)
   }, [ValidatorsService.nameValidator]);
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService, private afdb: AngularFireDatabase) { }
 
   ngOnInit(): void {
 
@@ -43,10 +44,9 @@ export class AddContactComponent implements OnInit {
   onSubmitForm(): void {
     this.clickedSubmit = true;
 
-    console.log(this.addForm);
+    console.debug(this.addForm);
     if (this.addForm.valid) {
-      const reqBody: Contact = {
-        id: uuidv4(),
+      const reqBody = {
         firstName: this.addForm.value.firstName,
         middleName: this.addForm.value.middleName,
         lastName: this.addForm.value.lastName,
@@ -56,14 +56,18 @@ export class AddContactComponent implements OnInit {
         remarks: this.addForm.value.remarks,
         dob: this.addForm.value.dob
       };
-      this.contactService.addContact(reqBody).subscribe(res => {
-        this.contactService.addContactSubj.next(res);
-        this.resetForm();
-      });
+      this.contactService.addContact(reqBody)
+        .then(_ => console.debug('Added contact.'))
+        .catch(err => console.error(err.message, 'Failed to add contact.'))
+        .finally(() => {
+          console.debug(this.addForm);
+          this.resetForm();
+        });
     }
   }
 
   resetForm(): void {
+    console.debug('Form has been reset.');
     this.addForm.reset();
     this.clickedSubmit = false;
   }

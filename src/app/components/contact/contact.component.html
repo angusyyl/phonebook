@@ -25,6 +25,6 @@
       <fa-icon [icon]="faCakeCandles" [fixedWidth]="true" [styles]="{'stroke': '#e1b12c', 'color': '#e1b12c'}"></fa-icon>
       {{contactVO?.contact?.dob}}
     </div>
-    <button (click)="onDelete(contactVO?.contact!.id)" class="btn">Delete</button>
+    <button (click)="onDelete(contactVO?.contact!.key)" class="btn">Delete</button>
   </div>
 </div>

@@ -1,7 +1,6 @@
 {
-  "contacts": [
-    {
-      "id": "353956a5-5aa6-4142-bd3a-29449968f8ee",
+  "contacts": {
+    "353956a5-5aa6-4142-bd3a-29449968f8ee": {
       "firstName": "Angus",
       "middleName": "Deep",
       "lastName": null,
@@ -11,8 +10,7 @@
       "remarks": null,
       "dob": null
     },
-    {
-      "id": "870e5fa0-67c4-4752-8c09-a106735482b1",
+    "870e5fa0-67c4-4752-8c09-a106735482b1": {
       "firstName": "Chris",
       "middleName": null,
       "lastName": "Chan",
@@ -22,8 +20,7 @@
       "remarks": null,
       "dob": "20-01-1995"
     },
-    {
-      "id": "da4fbf93-0e9c-426a-892d-c758c7540de7",
+    "da4fbf93-0e9c-426a-892d-c758c7540de7": {
       "firstName": "Angus",
       "middleName": null,
       "lastName": "Lam",
@@ -33,8 +30,7 @@
       "remarks": null,
       "dob": null
     },
-    {
-      "id": "0fe82372-06f3-4f52-a7e9-8542911a25ec",
+    "0fe82372-06f3-4f52-a7e9-8542911a25ec": {
       "firstName": "Jimmy",
       "middleName": null,
       "lastName": "Page",
@@ -44,8 +40,7 @@
       "remarks": null,
       "dob": null
     },
-    {
-      "id": "caed372b-b91d-4162-a4cc-be491f744f76",
+    "caed372b-b91d-4162-a4cc-be491f744f76": {
       "firstName": "Caros",
       "middleName": null,
       "lastName": null,
@@ -55,8 +50,7 @@
       "remarks": null,
       "dob": null
     },
-    {
-      "id": "a271d2b9-1a21-4967-963b-919493d5ba31",
+    "a271d2b9-1a21-4967-963b-919493d5ba31": {
       "firstName": "Lisa",
       "middleName": null,
       "lastName": "Lok",
@@ -66,8 +60,7 @@
       "remarks": null,
       "dob": null
     },
-    {
-      "id": "d1d9a4c8-9e32-45db-a04a-722859ff55ae",
+    "d1d9a4c8-9e32-45db-a04a-722859ff55ae": {
       "firstName": "Felix",
       "middleName": null,
       "lastName": "Choi",
@@ -77,8 +70,7 @@
       "remarks": "Student",
       "dob": null
     },
-    {
-      "id": "08e65a1a-3aec-47b9-9e6e-4f0a55648f4d",
+    "08e65a1a-3aec-47b9-9e6e-4f0a55648f4d": {
       "firstName": "Jupyter",
       "middleName": null,
       "lastName": "Notebook",
@@ -88,8 +80,7 @@
       "remarks": "hello world!",
       "dob": null
     },
-    {
-      "id": "1e4dd926-015b-46c8-b89d-33e07a94211b",
+    "1e4dd926-015b-46c8-b89d-33e07a94211b": {
       "firstName": "Blue",
       "middleName": null,
       "lastName": "Ocean",
@@ -99,5 +90,5 @@
       "remarks": "Save the ocean",
       "dob": null
     }
-  ]
+  }
 }
