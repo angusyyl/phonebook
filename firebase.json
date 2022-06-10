@@ -4,7 +4,9 @@
       "target": "phonebook",
       "public": "dist/phonebook",
       "ignore": [
-        "**/.*"
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
       ],
       "headers": [
         {
