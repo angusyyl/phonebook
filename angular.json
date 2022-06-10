@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "phonebook:build:production",
+            "firebaseProject": "phonebook-a7ad4",
+            "firebaseHostingSite": "phonebook-a7ad4"
+          }
         }
       }
     }

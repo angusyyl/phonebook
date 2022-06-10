@@ -37,8 +37,8 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  onDelete(id: string): void {
-    this.contactService.delContact(id).subscribe(() => this.contactService.delContactSubj.next(id));
+  onDelete(key: string): void {
+    this.contactService.delContact(key);
   }
 
 }

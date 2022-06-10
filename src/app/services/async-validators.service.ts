@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AsyncValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { Contact } from '../models/contact.model';
-import { ContactService } from './contact.service';
+import { debounceTime, map, take } from 'rxjs/operators';
+import { DEBOUNCE_TIME } from '../shared/constant';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,15 @@ export class AsyncValidatorsService {
 
   constructor() { }
 
-  static mobileAsyncValidator(contactService: ContactService): AsyncValidatorFn {
+  static mobileAsyncValidator(afdb: AngularFireDatabase): AsyncValidatorFn {
     return (ctrl: AbstractControl): Observable<ValidationErrors | null> => {
-      return contactService.getContacts().pipe(
-        map((contacts: Contact[]) => contacts.some(contact => contact.mobile === ctrl.value && ctrl.value !== '') ? { 'mobileAlreadyExists': true } : null)
-      );
+      // this is not working: ref.child('mobile').equalTo(ctrl.value)
+      return afdb.list('/contacts', ref => ref.orderByChild('mobile').equalTo(ctrl.value))
+        .valueChanges()
+        .pipe(debounceTime(DEBOUNCE_TIME),
+          take(1),
+          map(arr => arr.length ? { 'mobileAlreadyExists': true } : null)
+        )
     }
   }
 }

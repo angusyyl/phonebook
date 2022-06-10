@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { faDeleteLeft } from '@fortawesome/free-solid-svg-icons';
 import { debounceTime, distinctUntilChanged, fromEvent, Subscription } from 'rxjs';
 import { ContactService } from 'src/app/services/contact.service';
+import { DEBOUNCE_TIME } from 'src/app/shared/constant';
 
 @Component({
   selector: 'app-search-contact',
@@ -22,7 +23,7 @@ export class SearchContactComponent implements OnInit {
   constructor(private contactService: ContactService) { }
 
   ngOnInit(): void {
-    this.searchKeywordsSub = this.searchForm.get('searchKeyword')!.valueChanges.pipe(distinctUntilChanged(), debounceTime(500)).subscribe(val => {
+    this.searchKeywordsSub = this.searchForm.get('searchKeyword')!.valueChanges.pipe(distinctUntilChanged(), debounceTime(DEBOUNCE_TIME)).subscribe(val => {
       this.contactService.searchContactSubj.next(val);
     });
   }
