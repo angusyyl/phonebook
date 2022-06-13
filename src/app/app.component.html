@@ -1,4 +1,5 @@
-<div class="phonebook-box">
+<app-login></app-login>
+<div class="phonebook-box" *ngIf="auth.user | async">
   <app-header></app-header>
   <app-contact-list></app-contact-list>
 </div>

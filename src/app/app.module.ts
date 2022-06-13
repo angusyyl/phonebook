@@ -14,6 +14,7 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { HeaderComponent } from './components/header/header.component';
 import { AddContactComponent } from './components/header/add-contact/add-contact.component';
 import { SearchContactComponent } from './components/header/search-contact/search-contact.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SearchContactComponent } from './components/header/search-contact/searc
     ContactListComponent,
     HeaderComponent,
     AddContactComponent,
-    SearchContactComponent
+    SearchContactComponent,
+    LoginComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
